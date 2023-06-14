@@ -1,0 +1,41 @@
+{
+  "oms": {
+    "namespaces": [
+      "camunda",
+      "confluent",
+      "flux-system",
+      "meijer",
+      "meijer-rx",
+      "rng-kafka",
+      "rng-rx-kafka"
+    ],
+    "serviceAccounts": [
+      { "name": "meijer-sa", "namespace": "meijer" },
+      { "name": "flux-applier", "namespace": "meijer" },
+      { "name": "confluent-for-kubernetes", "namespace": "confluent" },
+      { "name": "flux-applier", "namespace": "confluent" },
+      { "name": "confluent-for-kubernetes", "namespace": "rng-kafka" },
+      { "name": "confluent-for-kubernetes", "namespace": "rng-rx-kafka" }
+    ],
+    "pods": []
+  },
+  "azure": {
+    "namespaces": ["arcdataservices", "azure-arc"],
+    "serviceAccounts": [],
+    "pods": [{ "name": "store", "namespace": "arcdataservices" }]
+  },
+  "sce": {
+    "namespaces": [
+      "camunda",
+      "confluent",
+      "flux-system",
+      "meijer",
+      "meijer-rx",
+      "rng-kafka",
+      "rng-rx-kafka"
+    ],
+    "serviceAccounts": [],
+    "pods": [{ "name": "source", "namespace": "flux-system" }]
+  },
+  "securityContexts": ["meijer-scc", "confluent-operator"]
+}

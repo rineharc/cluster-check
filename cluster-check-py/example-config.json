@@ -1,0 +1,87 @@
+{
+    "OMS": {
+        "namespaces": [
+            "camunda",
+            "confluent",
+            "flux-system",
+            "meijer",
+            "meijer-rx",
+            "rng-kafka",
+            "rng-rx-kafka"
+        ],
+        "service_accounts": [
+            {
+                "name": "meijer-sa",
+                "namespace": "meijer"
+            },
+            {
+                "name": "flux-applier",
+                "namespace": "meijer"
+            },
+            {
+                "name": "confluent-for-kubernetes",
+                "namespace": "confluent"
+            },
+            {
+                "name": "flux-applier",
+                "namespace": "confluent"
+            },
+            {
+                "name": "confluent-for-kubernetes",
+                "namespace": "rng-kafka"
+            },
+            {
+                "name": "confluent-for-kubernetes",
+                "namespace": "rng-rx-kafka"
+            }
+        ],
+        "pods": []
+    },
+    "Azure": {
+        "namespaces": [
+            "arcdataservices",
+            "azure-arc"
+        ],
+        "service_accounts": [],
+        "pods": [
+            {
+                "name": "store",
+                "namespace": "arcdataservices"
+            }
+        ]
+    },
+    "SCE": {
+        "namespaces": [
+            "camunda",
+            "confluent",
+            "flux-system",
+            "meijer",
+            "meijer-rx",
+            "rng-kafka",
+            "rng-rx-kafka"
+        ],
+        "service_accounts": [],
+        "pods": [
+            {
+                "name": "confluent-operator",
+                "namespace": "confluent"
+            },
+            {
+                "name": "kafka",
+                "namespace": "rng-kafka"
+            },
+            {
+                "name": "kafka",
+                "namespace": "rng-rx-kafka"
+            },
+            {
+                "name": "lightningcart",
+                "namespace": "meijer"
+            }
+        ]
+    },
+    "SecurityContexts": [
+        "meijer-scc",
+        "confluent-operator"
+    ]
+}

@@ -1,0 +1,46 @@
+{
+  "preflight": {
+    "namespaces": [
+      "default",
+      "kube-system",
+      "nonexistent"
+    ],
+    "serviceAccounts": [
+      {
+        "name": "default",
+        "namespace": "default"
+      },
+      {
+        "name": "default",
+        "namespace": "kube-system"
+      },
+      {
+        "name": "default",
+        "namespace": "nonexistent"
+      }
+    ],
+    "pods": [
+      {
+        "name": "source",
+        "namespace": "flux-system"
+      }
+    ]
+  },
+  "ready": {
+    "namespaces": [
+      "default",
+      "kube-system"
+    ],
+    "serviceAccounts": [
+      {
+        "name": "default",
+        "namespace": "default"
+      },
+      {
+        "name": "default",
+        "namespace": "kube-system"
+      }
+    ]
+  },
+  "securityContexts": ["restricted"]
+}
